@@ -8,6 +8,10 @@ public struct VerseIndexCollection {
     verseIndicesIndexDictionary = .init(uniqueKeysWithValues:
       verseIndices.enumerated().map { ($1, $0) })
   }
+  
+  public func index(of element: VerseIndex) -> Int? {
+    verseIndicesIndexDictionary[element]
+  }
 }
 
 extension VerseIndexCollection: Collection {
