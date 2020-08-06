@@ -14,6 +14,10 @@ public struct VerseIndexCollection {
   }
 }
 
+extension VerseIndexCollection: Equatable {}
+extension VerseIndexCollection: Hashable {}
+extension VerseIndexCollection: Codable {}
+
 extension VerseIndexCollection: Collection {
   public var startIndex: Int { verseIndices.startIndex }
   public var endIndex: Int { verseIndices.endIndex }
